@@ -1,0 +1,13 @@
+{% extends 'layout.html'%} {% block content%}
+<div class="container">
+    <h1>Text Analyzer Results</h1>
+    <div class="result-box">
+        <h1>Word Count</h1>
+       <p> {{ count }}</p> 
+    </div>
+     <div class="result-box">
+        <h1>Character Count</h1>
+        <p>{{ char }}</p>
+    </div>
+</div>
+{% endblock %}

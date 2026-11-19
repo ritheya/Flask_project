@@ -26,7 +26,7 @@ def post():
           count=len(word)
           char_count=len(content)
           sentence_count = len(re.findall(r'[.!?]', content))
-          para=len([p for p in content.split('\n\n') if p.strip()])
+          para=len([p for p in re.split(r'\n\s*\n',content.strip()) if p.strip()])
           avg_word=(sum([len(w) for w in word])/count) if count>0 else 0
           words=content.lower().split()
           word_freq={}

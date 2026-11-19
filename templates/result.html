@@ -1,13 +1,30 @@
 {% extends 'layout.html'%} {% block content%}
 <div class="container">
     <h1>Text Analyzer Results</h1>
+
     <div class="result-box">
-        <h1>Word Count</h1>
+        <h3>Word Count</h3>
        <p> {{ count }}</p> 
     </div>
      <div class="result-box">
-        <h1>Character Count</h1>
+        <h3>Character Count</h3>
         <p>{{ char }}</p>
+    </div>
+    <div class="result-box">
+        <h3>Sentence Count</h3>
+        <p>{{ sent_count }}</p>
+    </div>
+    <div class="result-box">
+        <h3>Paragraph Count</h3>
+        <p>{{ para_c }}</p>
+    </div>
+    <div class="result-box">
+        <h3> Average wordlength Count</h3>
+        <p>{{ "%.2f"|format(av|float) }}</p>
+    </div>
+    <div class="result-box">
+        <h3> Most frequent words</h3>
+        <p>{{ most}}</p>
     </div>
 </div>
 {% endblock %}
